@@ -6,15 +6,17 @@
   <title>Wedding Photo Upload</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body style="background-image: url('your-background-image.jpg');">
 
-  <h1>Wedding Photo Upload</h1>
+  <div class="container">
+    <h1>Wedding Photo Upload</h1>
 
-  <form action="/upload" method="POST" enctype="multipart/form-data">
-    <label for="image">Select a beautiful photo:</label>
-    <input type="file" id="image" name="image" accept="image/*" required>
-    <button type="submit">Share the Moment</button>
-  </form>
+    <form action="/.netlify/functions/upload" method="POST" enctype="multipart/form-data">
+      <label for="image">Select a beautiful photo:</label>
+      <input type="file" id="image" name="image" accept="image/*" required>
+      <button type="submit">Share the Moment</button>
+    </form>
+  </div>
 
 </body>
 </html>
